@@ -43,6 +43,7 @@ public class WC {
 		int words = 0;
 		int rows = 0;
 		int letters=0;
+		int len=strings.length;
 		try {
 			while((a=fr.read())!=-1){
 				/***依次扫描每个字符，如果是字母，则letters++，flag++,当flag大于等于2（至少两个字母连续出现即为一个单词）直到最后一个字符不为字母，则words++,flag置0；***/
@@ -67,7 +68,7 @@ public class WC {
 			e.printStackTrace();
 		}
     /***遍历字符串输出进行输出***/
-		for (int i = 0; i < strings.length; i++) {
+		for (int i = 0; i <len; i++) {
 			if(strings[i].equals("-c")) {
 				System.out.println("字符总数："+chars);
 			}
